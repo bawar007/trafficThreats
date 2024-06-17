@@ -27,6 +27,30 @@
         margin-top: 40px;
       }
     </style>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .faq-section {
+        width: 80%;
+        margin: auto;
+        padding: 20px;
+      }
+      .faq-question {
+        background-color: #f1f1f1;
+        padding: 10px;
+        border: 1px solid #ccc;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+      .faq-answer {
+        padding: 10px;
+        display: none;
+        border-left: 3px solid #007bff;
+        border-bottom: 1px solid #ccc;
+        background-color: #fff;
+      }
+    </style>
   </head>
   <body>
     <div class="app">
@@ -47,6 +71,127 @@
         poprawne konto zostało usunięte.
       </h3>
       <img src="./step4.png" alt="step2" width="250" />
+      <h2>FAQ</h2>
+      <div class="faq-section">
+        <div class="faq-item">
+          <div class="faq-question">Co to jest Traffic Threats?</div>
+          <div class="faq-answer">
+            Traffic Threats to aplikacja, która umożliwia użytkownikom dodawanie
+            zagrożeń na mapie. Użytkownicy mogą przeglądać zagrożenia, aby
+            dowiedzieć się, co się dzieje w ich okolicy oraz sprawdzać swoje
+            statystyki dotyczące dodanych i potwierdzonych zagrożeń.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Jak mogę zainstalować Traffic Threats?</div>
+          <div class="faq-answer">
+            Aplikację Traffic Threats można pobrać i zainstalować z oficjalnego
+            sklepu z aplikacjami na swoim urządzeniu mobilnym (App Store dla iOS
+            lub Google Play dla Androida).
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            Czy muszę się rejestrować, aby korzystać z aplikacji?
+          </div>
+          <div class="faq-answer">
+            Rejestracja nie jest wymagana do przeglądania zagrożeń na mapie.
+            Jednakże, aby dodawać zagrożenia i przeglądać swoje statystyki,
+            konieczne jest założenie konta.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Jak mogę dodać zagrożenie?</div>
+          <div class="faq-answer">
+            Aby dodać zagrożenie, zaloguj się na swoje konto, a następnie
+            kliknij przycisk "Dodaj zagrożenie". Wprowadź wymagane informacje
+            dotyczące zagrożenia i zatwierdź zgłoszenie.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Jakie rodzaje zagrożeń mogę zgłaszać?</div>
+          <div class="faq-answer">
+            Możesz zgłaszać różnorodne zagrożenia drogowe, takie jak wypadki,
+            korki, kontrole drogowe itp.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            Dlaczego aplikacja potrzebuje dostępu do mojej lokalizacji?
+          </div>
+          <div class="faq-answer">
+            Aplikacja Traffic Threats wymaga dostępu do lokalizacji w trybie
+            ciągłym, aby informować Cię w czasie rzeczywistym o nowych
+            zagrożeniach w Twojej okolicy. To pozwala na otrzymywanie aktualnych
+            powiadomień o zagrożeniach, nawet gdy aplikacja jest zamknięta.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Czy moje dane osobowe są bezpieczne?</div>
+          <div class="faq-answer">
+            Tak, Twoje dane osobowe są przetwarzane zgodnie z naszą Polityką
+            Prywatności. Dbamy o bezpieczeństwo Twoich danych i stosujemy
+            odpowiednie środki ochrony.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            Jak mogę skontaktować się z zespołem wsparcia?
+          </div>
+          <div class="faq-answer">
+            Jeśli potrzebujesz pomocy lub masz pytania, możesz skontaktować się
+            z naszym zespołem wsparcia, wysyłając e-mail na adres
+            trafficthreats@gmail.com.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            Jakie uprawnienia muszę przyznać aplikacji?
+          </div>
+          <div class="faq-answer">
+            Aplikacja wymaga uprawnień do lokalizacji w trybie ciągłym oraz
+            uprawnień do powiadomień. Są one niezbędne do zapewnienia pełnej
+            funkcjonalności aplikacji.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Czy mogę zgłaszać fałszywe zagrożenia?</div>
+          <div class="faq-answer">
+            Zgłaszanie fałszywych zagrożeń jest surowo zabronione. Prosimy o
+            zgłaszanie tylko rzeczywistych zagrożeń, aby zapewnić dokładność i
+            wiarygodność informacji dla wszystkich użytkowników.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Jak mogę usunąć swoje konto?</div>
+          <div class="faq-answer">
+            Aby usunąć swoje konto, musisz wejść w zakładkę "ustawienia", tam
+            wybrać "zarządzaj kontem" i wybrać opcję usuń konto, następnie
+            postępuj z krokami zawartymi w aplikacji. Jeśli logowałeś się z
+            użyciem konta Google, wystarczy wejść w zakładkę "ustawienia" i
+            wybrać opcję "usuń konto"
+          </div>
+        </div>
+      </div>
     </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var questions = document.querySelectorAll(".faq-question");
+
+        questions.forEach(function (question) {
+          question.addEventListener("click", function () {
+            var answer = this.nextElementSibling;
+            if (
+              answer.style.display === "none" ||
+              answer.style.display === ""
+            ) {
+              answer.style.display = "block";
+            } else {
+              answer.style.display = "none";
+            }
+          });
+        });
+      });
+    </script>
   </body>
 </html>
