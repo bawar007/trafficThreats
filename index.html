@@ -6,6 +6,38 @@
     <title>Traffic Threats</title>
     <style>
       body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        padding: 20px;
+      }
+      .menu-item:hover a {
+        background-color: #333;
+        color: #fff;
+      }
+      .menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f0f0f0;
+        padding: 10px 0;
+      }
+      .menu-item {
+        margin: 0 10px;
+      }
+      .menu-item a {
+        text-decoration: none;
+        padding: 10px;
+        color: #333;
+        font-weight: bold;
+      }
+      .menu-item a.active {
+        background-color: #333;
+        color: #fff;
+        border-radius: 5px;
+      }
+    </style>
+    <style>
+      body {
         background-color: black;
         margin: auto;
       }
@@ -27,54 +59,19 @@
         margin-top: 40px;
       }
     </style>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-      }
-      .faq-section {
-        width: 80%;
-        margin: auto;
-        padding: 20px;
-      }
-      .faq-question {
-        background-color: #f1f1f1;
-        padding: 10px;
-        border: 1px solid #ccc;
-        cursor: pointer;
-        margin-top: 10px;
-      }
-      .faq-answer {
-        padding: 10px;
-        display: none;
-        border-left: 3px solid #007bff;
-        border-bottom: 1px solid #ccc;
-        background-color: #fff;
-      }
-    </style>
-    <style>
-      .license-section {
-        width: 80%;
-        margin: auto;
-      }
-      .license-item {
-        margin-bottom: 20px;
-      }
-      .license-title {
-        font-size: 20px;
-        font-weight: bold;
-        margin-bottom: 10px;
-        color: white;
-      }
-      .license-text {
-        white-space: pre-line;
-        color: white;
-      }
-      .license-link {
-        color: blue;
-      }
-    </style>
   </head>
   <body>
+    <div class="menu">
+      <div class="menu-item">
+        <a href="index.html" class="menu-link">Home</a>
+      </div>
+      <div class="menu-item">
+        <a href="faq.html" class="menu-link">FAQ</a>
+      </div>
+      <div class="menu-item">
+        <a href="license.html" class="menu-link">LICENSE</a>
+      </div>
+    </div>
     <div class="app">
       <h1>Witaj w Traffic Threats</h1>
       <h2>
@@ -93,343 +90,6 @@
         poprawne konto zostało usunięte.
       </h3>
       <img src="./step4.png" alt="step2" width="250" />
-      <h2>FAQ</h2>
-      <div class="faq-section">
-        <div class="faq-item">
-          <div class="faq-question">Co to jest Traffic Threats?</div>
-          <div class="faq-answer">
-            Traffic Threats to aplikacja, która umożliwia użytkownikom dodawanie
-            zagrożeń na mapie. Użytkownicy mogą przeglądać zagrożenia, aby
-            dowiedzieć się, co się dzieje w ich okolicy oraz sprawdzać swoje
-            statystyki dotyczące dodanych i potwierdzonych zagrożeń.
-          </div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-question">Jak mogę zainstalować Traffic Threats?</div>
-          <div class="faq-answer">
-            Aplikację Traffic Threats można pobrać i zainstalować z oficjalnego
-            sklepu z aplikacjami na swoim urządzeniu mobilnym (App Store dla iOS
-            lub Google Play dla Androida).
-          </div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-question">
-            Czy muszę się rejestrować, aby korzystać z aplikacji?
-          </div>
-          <div class="faq-answer">
-            Rejestracja nie jest wymagana do przeglądania zagrożeń na mapie.
-            Jednakże, aby dodawać zagrożenia i przeglądać swoje statystyki,
-            konieczne jest założenie konta.
-          </div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-question">Jak mogę dodać zagrożenie?</div>
-          <div class="faq-answer">
-            Aby dodać zagrożenie, zaloguj się na swoje konto, a następnie
-            kliknij przycisk "Dodaj zagrożenie". Wprowadź wymagane informacje
-            dotyczące zagrożenia i zatwierdź zgłoszenie.
-          </div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-question">Jakie rodzaje zagrożeń mogę zgłaszać?</div>
-          <div class="faq-answer">
-            Możesz zgłaszać różnorodne zagrożenia drogowe, takie jak wypadki,
-            korki, kontrole drogowe itp.
-          </div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-question">
-            Dlaczego aplikacja potrzebuje dostępu do mojej lokalizacji?
-          </div>
-          <div class="faq-answer">
-            Aplikacja Traffic Threats wymaga dostępu do lokalizacji w trybie
-            ciągłym, aby informować Cię w czasie rzeczywistym o nowych
-            zagrożeniach w Twojej okolicy. To pozwala na otrzymywanie aktualnych
-            powiadomień o zagrożeniach, nawet gdy aplikacja jest zamknięta.
-          </div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-question">Czy moje dane osobowe są bezpieczne?</div>
-          <div class="faq-answer">
-            Tak, Twoje dane osobowe są przetwarzane zgodnie z naszą Polityką
-            Prywatności. Dbamy o bezpieczeństwo Twoich danych i stosujemy
-            odpowiednie środki ochrony.
-          </div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-question">
-            Jak mogę skontaktować się z zespołem wsparcia?
-          </div>
-          <div class="faq-answer">
-            Jeśli potrzebujesz pomocy lub masz pytania, możesz skontaktować się
-            z naszym zespołem wsparcia, wysyłając e-mail na adres
-            trafficthreats@gmail.com.
-          </div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-question">
-            Jakie uprawnienia muszę przyznać aplikacji?
-          </div>
-          <div class="faq-answer">
-            Aplikacja wymaga uprawnień do lokalizacji w trybie ciągłym oraz
-            uprawnień do powiadomień. Są one niezbędne do zapewnienia pełnej
-            funkcjonalności aplikacji.
-          </div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-question">Czy mogę zgłaszać fałszywe zagrożenia?</div>
-          <div class="faq-answer">
-            Zgłaszanie fałszywych zagrożeń jest surowo zabronione. Prosimy o
-            zgłaszanie tylko rzeczywistych zagrożeń, aby zapewnić dokładność i
-            wiarygodność informacji dla wszystkich użytkowników.
-          </div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-question">Jak mogę usunąć swoje konto?</div>
-          <div class="faq-answer">
-            Aby usunąć swoje konto, musisz wejść w zakładkę "ustawienia", tam
-            wybrać "zarządzaj kontem" i wybrać opcję usuń konto, następnie
-            postępuj z krokami zawartymi w aplikacji. Jeśli logowałeś się z
-            użyciem konta Google, wystarczy wejść w zakładkę "ustawienia" i
-            wybrać opcję "usuń konto"
-          </div>
-        </div>
-      </div>
-      <div class="license-section">
-        <h1>O licencji</h1>
-
-        <div class="license-item">
-          <div class="license-title">@freakycoder/react-native-bounceable</div>
-          <div class="license-text">
-            Licencja: MIT<br />
-            Pełny tekst licencji:
-            <a
-              href="https://opensource.org/licenses/MIT"
-              target="_blank"
-              class="license-link"
-              >https://opensource.org/licenses/MIT</a
-            >
-          </div>
-        </div>
-
-        <div class="license-item">
-          <div class="license-title">@react-native-community/checkbox</div>
-          <div class="license-text">
-            Licencja: MIT<br />
-            Pełny tekst licencji:
-            <a
-              href="https://opensource.org/licenses/MIT"
-              target="_blank"
-              class="license-link"
-              >https://opensource.org/licenses/MIT</a
-            >
-          </div>
-        </div>
-
-        <div class="license-item">
-          <div class="license-title">@react-native-community/netinfo</div>
-          <div class="license-text">
-            Licencja: MIT<br />
-            Pełny tekst licencji:
-            <a
-              href="https://opensource.org/licenses/MIT"
-              target="_blank"
-              class="license-link"
-              >https://opensource.org/licenses/MIT</a
-            >
-          </div>
-        </div>
-
-        <div class="license-item">
-          <div class="license-title">
-            @react-native-firebase/analytics, @react-native-firebase/app,
-            @react-native-firebase/auth, @react-native-firebase/crashlytics,
-            @react-native-firebase/database, @react-native-firebase/messaging
-          </div>
-          <div class="license-text">
-            Licencja: Apache License 2.0<br />
-            Pełny tekst licencji:
-            <a
-              href="https://www.apache.org/licenses/LICENSE-2.0"
-              target="_blank"
-              class="license-link"
-              >https://www.apache.org/licenses/LICENSE-2.0</a
-            >
-          </div>
-        </div>
-
-        <div class="license-item">
-          <div class="license-title">formik</div>
-          <div class="license-text">
-            Licencja: MIT<br />
-            Pełny tekst licencji:
-            <a
-              href="https://opensource.org/licenses/MIT"
-              target="_blank"
-              class="license-link"
-              >https://opensource.org/licenses/MIT</a
-            >
-          </div>
-        </div>
-
-        <div class="license-item">
-          <div class="license-title">geolib</div>
-          <div class="license-text">
-            Licencja: MIT<br />
-            Pełny tekst licencji:
-            <a
-              href="https://opensource.org/licenses/MIT"
-              target="_blank"
-              class="license-link"
-              >https://opensource.org/licenses/MIT</a
-            >
-          </div>
-        </div>
-
-        <div class="license-item">
-          <div class="license-title">install</div>
-          <div class="license-text">
-            Licencja: MIT<br />
-            Pełny tekst licencji:
-            <a
-              href="https://opensource.org/licenses/MIT"
-              target="_blank"
-              class="license-link"
-              >https://opensource.org/licenses/MIT</a
-            >
-          </div>
-        </div>
-
-        <div class="license-item">
-          <div class="license-title">jwt-decode</div>
-          <div class="license-text">
-            Licencja: MIT<br />
-            Pełny tekst licencji:
-            <a
-              href="https://opensource.org/licenses/MIT"
-              target="_blank"
-              class="license-link"
-              >https://opensource.org/licenses/MIT</a
-            >
-          </div>
-        </div>
-        <div class="license-item">
-          <div class="license-title">lottie-react-native</div>
-          <div class="license-text">
-            Licencja: BSD<br />
-            Pełny tekst licencji:
-            <a
-              href="https://opensource.org/licenses/BSD-3-Clause"
-              target="_blank"
-              class="license-link"
-              >https://opensource.org/licenses/BSD-3-Clause</a
-            >
-          </div>
-        </div>
-
-        <div class="license-item">
-          <div class="license-title">npm</div>
-          <div class="license-text">
-            Licencja: Artistic License 2.0<br />
-            Pełny tekst licencji:
-            <a
-              href="https://opensource.org/licenses/Artistic-2.0"
-              target="_blank"
-              class="license-link"
-              >https://opensource.org/licenses/Artistic-2.0</a
-            >
-          </div>
-        </div>
-
-        <div class="license-item">
-          <div class="license-title">react, react-native</div>
-          <div class="license-text">
-            Licencja: MIT<br />
-            Pełny tekst licencji:
-            <a
-              href="https://opensource.org/licenses/MIT"
-              target="_blank"
-              class="license-link"
-              >https://opensource.org/licenses/MIT</a
-            >
-          </div>
-        </div>
-
-        <div class="license-item">
-          <div class="license-title">
-            react-native-animatable, react-native-animate-number,
-            react-native-animated-numbers, react-native-bouncy-checkbox,
-            react-native-dotenv, react-native-draggable,
-            react-native-drop-shadow, react-native-dropdown-select-list,
-            react-native-flash-message, react-native-floating-action,
-            react-native-gesture-handler, react-native-gifted-charts,
-            react-native-google-mobile-ads, react-native-linear-gradient,
-            react-native-map-clustering, react-native-maps, react-native-modal,
-            react-native-multiple-select, react-native-permissions,
-            react-native-picker-select, react-native-push-notification,
-            react-native-reanimated, react-native-safe-area-context,
-            react-native-screens, react-native-svg,
-            react-native-svg-transformer, react-native-swiper-flatlist
-          </div>
-          <div class="license-text">
-            Licencja: MIT<br />
-            Pełny tekst licencji:
-            <a
-              href="https://opensource.org/licenses/MIT"
-              target="_blank"
-              class="license-link"
-              >https://opensource.org/licenses/MIT</a
-            >
-          </div>
-        </div>
-
-        <div class="license-item">
-          <div class="license-title">typescript</div>
-          <div class="license-text">
-            Licencja: Apache License 2.0<br />
-            Pełny tekst licencji:
-            <a
-              href="https://www.apache.org/licenses/LICENSE-2.0"
-              target="_blank"
-              class="license-link"
-              >https://www.apache.org/licenses/LICENSE-2.0</a
-            >
-          </div>
-        </div>
-
-        <div class="license-item">
-          <div class="license-title">yup</div>
-          <div class="license-text">
-            Licencja: MIT<br />
-            Pełny tekst licencji:
-            <a
-              href="https://opensource.org/licenses/MIT"
-              target="_blank"
-              class="license-link"
-              >https://opensource.org/licenses/MIT</a
-            >
-          </div>
-        </div>
-      </div>
     </div>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        var questions = document.querySelectorAll(".faq-question");
-
-        questions.forEach(function (question) {
-          question.addEventListener("click", function () {
-            var answer = this.nextElementSibling;
-            if (
-              answer.style.display === "none" ||
-              answer.style.display === ""
-            ) {
-              answer.style.display = "block";
-            } else {
-              answer.style.display = "none";
-            }
-          });
-        });
-      });
-    </script>
   </body>
 </html>
