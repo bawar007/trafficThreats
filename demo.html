@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes"
+    />
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+    <title>Map with the truck routes and road restrictions</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://js.api.here.com/v3/3.1/mapsjs-ui.css"
+    />
+    <link rel="stylesheet" type="text/css" href="demo.css" />
+
+    <!-- <link rel="stylesheet" type="text/css" href="../template.css" /> -->
+
+    <script
+      type="text/javascript"
+      src="https://js.api.here.com/v3/3.1/mapsjs-core.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://js.api.here.com/v3/3.1/mapsjs-service.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://js.api.here.com/v3/3.1/mapsjs-ui.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"
+    ></script>
+  </head>
+  <body id="markers-on-the-map">
+    <div id="map"></div>
+
+    <script>
+      var mapContainer = document.getElementById("map");
+
+      // Step 1: initialize communication with the platform
+      // In your own code, replace variable window.apikey with your own apikey
+      var platform = new H.service.Platform({
+        apikey: "xsTN4iQQtwqHM4g6d5uKrju_X_s94pstOozTBGU8suA",
+      });
+
+      var defaultLayers = platform.createDefaultLayers();
+
+      // Step 2: initialize a map - this map is centered over Berlin
+      var map = new H.Map(
+        mapContainer,
+        // Set truck restriction layer as a base map
+        defaultLayers.vector.normal.truck,
+        {
+          center: { lat: 40.74539, lng: -74.022917 },
+          zoom: 13.2,
+          pixelRatio: 1,
+        }
+      );
+
+      var behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
+
+      map.addObject(routes);
+    </script>
+  </body>
+</html>
